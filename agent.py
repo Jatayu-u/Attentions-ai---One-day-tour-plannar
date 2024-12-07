@@ -3,16 +3,16 @@ import requests
 from groq import Groq
 
 # Initialize Groq client
-client = Groq(api_key="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")
+client = Groq(api_key="Your_api_key")
 MODEL = "llama3-groq-70b-8192-tool-use-preview"
 
 # Predefined login credentials (Replace with a more secure authentication method in production)
-VALID_USERNAME = "shaurya"
-VALID_PASSWORD = "password123"
+VALID_USERNAME = ""
+VALID_PASSWORD = ""
 
 # Fetch weather data function
 def fetch_weather(city):
-    OPENWEATHER_API_KEY = "0ae4bf4c7bd39f11cabfb5d7d0a219ff"
+    OPENWEATHER_API_KEY = "Your_api_key"
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHER_API_KEY}&units=metric"
     try:
         response = requests.get(url)
